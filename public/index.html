@@ -27,7 +27,12 @@ Hello World!!!!!
 
   <div class="form-div"></div>
 
-  <template id="painting-template">
+  <template id="painting-template" type="text/x-handlebars-template">
+    {{#each paintings}}
+    <h1>{{this.title}}</h1>
+    <h4>{{this.year_made}}</h4>
+    <img src="{{this.img_url}}"></img>
+    {{/each}}
   </template>
 
   <template id="artist-template" type="text/x-handlebars-template">
