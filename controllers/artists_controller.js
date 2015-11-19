@@ -1,7 +1,7 @@
 'use strict';
 let express = require('express');
 let router = express.Router();
-let Artist = require('./models/artists.js');
+let Artist = require('../models/artists.js');
 
 router.route('/')
   .get(function(req, res, next) {
@@ -35,7 +35,7 @@ router.route('/:id')
         if (err) {
           throw err;
         }
-        else (artist) {
+        else if (artist) {
           for (var paintingId in artist.paintings) {
             Paintings.find({ _id : paintingId },
               function(err, painting) {
