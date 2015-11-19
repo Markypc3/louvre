@@ -1,10 +1,11 @@
+'use strict';
 let express = require('express');
-let router = express.router();
+let router = express.Router();
 
 router.route('/')
-  .get((req, res, next) => {
+  .get(function(req, res, next) {
     res.send('hello world');
-  })
+  });
 
 
 
