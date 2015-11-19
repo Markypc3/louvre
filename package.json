@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Markypc3/louvre/issues"
   },
-  "homepage": "https://github.com/Markypc3/louvre#readme"
+  "homepage": "https://github.com/Markypc3/louvre#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
