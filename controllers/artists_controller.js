@@ -5,10 +5,13 @@ let Artist = require('../models/artists.js');
 
 router.route('/')
   .get(function(req, res, next) {
-    res.send('hello world');
+    Artist.find(null,function(artists){
+      console.log(artists);
+      res.send(artists);
+    });
   });
-router.route('/new')
-router.route('/')
+// router.route('/new')
+// router.route('/')
 
 router.route('/:id')
   .get(function(req,res,next){
