@@ -7,8 +7,9 @@ let artistSchema = new mongoose.Schema({
   img_url: String,
   nationality: String,
   birthYear: Number,
-  description, String
+  description: String,
+  paintings: Array
 });
 
-var Artist = mongoose.model('Artist', artistSchema);
-module.exports = Artist;
+let Artists = mongoose.model('Artists', artistSchema);
+module.exports = Artists;
