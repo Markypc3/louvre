@@ -35,7 +35,7 @@ router.route('/:id')
         if (err) {
           throw err;
         }
-        else (artist) {
+        else if (artist) {
           for (var paintingId in artist.paintings) {
             Paintings.find({ _id : paintingId },
               function(err, painting) {
