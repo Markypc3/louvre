@@ -8,4 +8,5 @@ app.use('/artists', artistRoutes);
 let server = app.listen(3000,function() {
   let host = server.address().address;
   let port = server.address().port;
+  console.log('Louvre App listening on port ' + port);
 });
