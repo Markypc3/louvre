@@ -6,8 +6,13 @@ let Artists = require('../models/artists.js');
 
 router.route('/paintings/all')
   .get((req, res, next) => {
-    // find events
     res.send(Paintings.all());
+  });
+
+  router.route('/paintings/:id')
+  .get((req, res, next) => {
+    let result = Paintings.find({"_id":req.params.id});
+    res.send(result);
   });
 
 module.exports = router;
