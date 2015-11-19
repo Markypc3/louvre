@@ -30,7 +30,13 @@ Hello World!!!!!
   <template id="painting-template">
   </template>
 
-  <template id="artist-template">
+  <template id="artist-template" type="text/x-handlebars-template">
+    {{#each artists}}
+    <h2>{{this.name}}</h2>
+    <p>Nationality: {{this.nationality}}</p>
+    <p>Born: {{this.birthYear}}</p>
+    <img src="{{this.img_url}}"></img>
+    <p>{{this.description}}</p>
   </template>
 
   <template id="artist-form-template">
@@ -41,6 +47,9 @@ Hello World!!!!!
 
   <template id="painting-form-template">
   </template>
+
+
+  <script type="text/javascript" src="app.js"></script>
 
 </body>
 </html>
