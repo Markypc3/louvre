@@ -1,0 +1,19 @@
+{
+  "name": "louvre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markypc3/louvre.git"
+  },
+  "author": "Marco Pariente-Cohen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markypc3/louvre/issues"
+  },
+  "homepage": "https://github.com/Markypc3/louvre#readme"
+}
