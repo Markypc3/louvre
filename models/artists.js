@@ -11,5 +11,4 @@ let artistSchema = new mongoose.Schema({
   paintings: Array
 });
 
-let Artists = mongoose.model('Artists', artistSchema);
-module.exports = Artists;
+module.exports = mongoose.model('Artists', artistSchema);
