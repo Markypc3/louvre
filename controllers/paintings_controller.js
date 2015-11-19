@@ -4,15 +4,21 @@ let router = express.Router();
 let Paintings = require('../models/paintings.js');
 let Artists = require('../models/artists.js');
 
-router.route('/paintings/all')
+router.route('/')
   .get((req, res, next), function(){
-    res.send(Paintings.all());
+    res.send(Paintings.find());
   });
 
-  router.route('/paintings/:id')
+  router.route('/:id')
   .get((req, res, next), function(){
     let result = Paintings.find({"_id":req.params.id});
     res.send(result);
   });
+
+  // router.route('/:id/delete')
+  // .get((req, res, next), function(){
+  //   let result = Paintings.find({"_id":req.params.id});
+  //   res.send(result);
+  // });
 
 module.exports = router;
