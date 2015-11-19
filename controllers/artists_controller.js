@@ -2,10 +2,11 @@
 let express = require('express');
 let router = express.Router();
 let Artist = require('../models/artists.js');
+let Painting = require('../models/paintings.js');
 
 router.route('/')
   .get(function(req, res, next) {
-    Artist.find(null,function(artists){
+    Artist.find(null,function(err,artists){
       console.log(artists);
       res.send(artists);
     });
@@ -15,7 +16,7 @@ router.route('/')
 
 router.route('/:id')
   .get(function(req,res,next){
-    Artist.find(function(err, artists){
+    Artist.findById(req.params.id,function(err, artists){
       if (err) {
         throw err;
       }
@@ -52,7 +53,9 @@ router.route('/:id')
         }
       })
     })
+    .post(function(req, res, next) {
 
+    });
 
 
 
