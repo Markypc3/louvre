@@ -1,6 +1,11 @@
 'use strict';
 let express = require('express');
 let app = express();
+var mongoose = require('mongoose');
+var db = mongoose.connect(
+  'mongodb://localhost/museumrApp',function(){
+    console.log('connected to mongodb');
+  });
 let artistRoutes = require('./controllers/artists_controller');
 let paintingRoutes = require('./controllers/paintings_controller.js');
 app.use(express.static('./public'));

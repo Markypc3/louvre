@@ -1,12 +1,19 @@
 'use strict';
 let express = require('express');
 let router = express.Router();
+// var mongoose = require('mongoose');
+// var db = mongoose.connect(
+//   'mongodb://localhost/museumrApp',function(){
+//     console.log('connected to mongodb');
+//   });
 let Artist = require('../models/artists.js');
 let Painting = require('../models/paintings.js');
-
+console.log(Artist);
 router.route('/')
   .get(function(req, res, next) {
-    Artist.find(null,function(err,artists){
+    debugger;
+    console.log('hit');
+    Artist.find(null,function(err, artists){
       console.log(artists);
       res.send(artists);
     });
